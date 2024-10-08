@@ -1,0 +1,180 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h3 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.deleteCalc {
+  background-color: #f44336;
+}
+
+.deleteCalc:hover {
+  background-color: #e41f1f;
+}
+
+#newcalc {
+  margin-top: 30px;
+}
+
+.calculator-instance {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  width: 300px;
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.calculator-instance input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.results {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.results div {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.results .value {
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.rate, .warehouse {
+  font-style: italic;
+  color: #666;
+}
+
+#combinedTotal {
+  font-size: 24px;
+  color: #ff5722;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Tabs styles */
+.tab {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab button {
+  background-color: inherit;
+  background-color: hwb(203 53% 12%);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+}
+
+.tab button:hover {
+  background-color: #39a6e4;
+}
+
+.tab button.active {
+  background-color: #39a6e4;
+}
+
+.tabcontent {
+  display: none;
+  padding: 20px;
+}
+
+/* Style for the dropdown */
+/* Style for the dropdown */
+select {
+  width: 200px; /* Adjust the width for better visibility */
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f4f4f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  appearance: none; /* Remove default dropdown arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns%3D%22http://www.w3.org/2000/svg%22 fill%3D%22%23333%22 viewBox%3D%220 0 24 24%22%3E%3Cpath d%3D%22M7 10l5 5 5-5z%22/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for modern effect */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+select:focus {
+  border-color: #4CAF50; /* Change border color on focus */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on focus */
+  outline: none;
+}
+
+select:hover {
+  border-color: #4CAF50; /* Change border color on hover */
+}
+
+select:focus {
+  border-color: #4CAF50; /* Change border color on focus */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on focus */
+  outline: none;
+}
+
+select:hover {
+  border-color: #4CAF50; /* Change border color on hover */
+}
+
+/* Style the date input to match other inputs */
+input[type="date"] {
+  width: 20%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f4f4f9;
+  color: #333;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="date"]:focus {
+  border-color: #4CAF50; /* Match focus color with other inputs */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on focus */
+}
+

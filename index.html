@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Calculators with Shared WR</title>
+  
+  <!-- Link to the external CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Tab navigation -->
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'ByAir')">By Air</button>
+    <button class="tablinks" onclick="openTab(event, 'ByOcean')">By Ocean</button>
+  </div>
+
+  <!-- Tab content for By Air -->
+  <div id="ByAir" class="tabcontent">
+    <h3>By Air</h3>
+    <h3>Combined Total of All Calculators: <span id="combinedTotalAir">0.00</span></h3>
+    
+    <!-- Dropdown to select how many calculators to add -->
+    <label for="numCalculatorsAir">Select number of calculators to add:</label>
+    <select id="numCalculatorsAir">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+
+    <!-- Input for Invoice Number -->
+<input type="text" id="invoiceNumberAir" placeholder="Invoice Number" style="width: 20%; padding: 10px; margin-bottom: 20px;">
+
+<!-- Input for Date -->
+<input type="date" id="invoiceDateAir" style="width: 20%; padding: 10px; margin-bottom: 20px;">
+
+
+    <!-- Buttons for adding calculators and downloading Excel -->
+    <button style="background-color: rgb(37, 145, 213);" id="addCalcAir">Add Calculator</button>
+    <button style="background-color: rgb(0, 95, 154);" id="addCalcSharedWR">Add WR Calculator</button> <!-- New button for Shared WR -->
+    <button onclick="calculateAllAir()">Calculate All</button>
+    <button style="background-color: orange;" id="downloadExcelAir">Download Excel</button>
+
+    <!-- Where calculators will be dynamically added -->
+    <div id="newcalcAir"></div>
+  </div>
+
+  <!-- Tab content for By Ocean -->
+  <div id="ByOcean" class="tabcontent">
+    <h3>By Ocean</h3>
+    <h3>Combined Total of All Calculators: <span id="combinedTotalOcean">0.00</span></h3>
+    
+    <!-- Dropdown to select how many calculators to add -->
+    <label for="numCalculatorsOcean">Select number of calculators to add:</label>
+    <select id="numCalculatorsOcean">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+
+    <!-- Input for Invoice Number -->
+    <input type="text" id="invoiceNumberOcean" placeholder="Invoice Number" style="width: 20%; padding: 10px; margin-bottom: 20px;">
+
+    <!-- Buttons for adding calculators and downloading Excel -->
+    <button id="addCalcOcean">Add Calculators</button>
+    <button onclick="calculateAllOcean()">Calculate All</button>
+    <button id="downloadExcelOcean">Download Excel</button>
+
+    <!-- Where calculators will be dynamically added -->
+    <div id="newcalcOcean"></div>
+  </div>
+
+  <!-- Link to the external JavaScript files -->
+  <script src="calculator.js"></script> <!-- For By Air and Shared WR -->
+  <script src="byOcean.js"></script> <!-- For By Ocean -->
+  <script src="opentab.js"></script> <!-- Tab switching logic -->
+  <!-- Add this to your HTML to include SheetJS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+
+
+</body>
+</html>
